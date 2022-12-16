@@ -16,7 +16,7 @@ public class CoffeeKiosk {
 	
 	public void displayMenu() {
 		for (int i = 0; i < menu.size(); i++) {	
-			System.out.println(menu.get(i));
+			System.out.println(menu.get(i).getIndex() + " " + menu.get(i).getName() + " -- " + menu.get(i).getPrice());
 		}
 	}
 }

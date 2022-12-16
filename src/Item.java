@@ -1,11 +1,11 @@
 
 public class Item {
-	private int index = 0;
+	public static int index = 0;
 	private String name;
 	private double price;
 	
 	public Item(String name, double price) {
-		index++;
+		Item.index += 1;
 		this.name = name;
 		this.price = price;
 	}
@@ -28,9 +28,5 @@ public class Item {
 	
 	public int getIndex() {
 		return index;
-	}
-	
-	public void setIndex(int index) {
-		this.index = index;
 	}
 }
