@@ -19,6 +19,21 @@ public class CoffeeKiosk {
 			System.out.println(menu.get(i).getIndex() + " " + menu.get(i).getName() + " -- " + menu.get(i).getPrice());
 		}
 	}
+	
+	public void newOrder() {
+		System.out.println("Please enter the customer name for the new order...");
+		String name = System.console().readLine();
+		Order newOrder = new Order(name);
+		
+		System.out.println("Please enter a menu item or q to quit...");
+		String itemNumber = System.console().readLine();
+		
+		while(!itemNumber.equals("q")) {
+			newOrder.addItem(itemNumber));
+		}
+		
+		newOrder.display();
+	}
 }
 
 
